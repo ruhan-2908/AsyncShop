@@ -1,3 +1,20 @@
+# Common
 node_modules/
 config/
 .env
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+frontend/coverage/
+frontend/.pnp
+frontend/.pnp.js
+frontend/.DS_Store
+frontend/.env*
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Backend
+backend/node_modules/
+backend/target/
