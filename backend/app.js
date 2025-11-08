@@ -10,6 +10,8 @@ const orders = require("./routes/order");
 const { connect } = require('http2');
 
 connectDatabase();
+
+app.use(express.json())
 app.use('/api/v1/',products);
 app.use('/api/v1/',orders);
 
