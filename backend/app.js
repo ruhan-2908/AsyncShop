@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const connectDatabase = require("./config/connectDatabase")
 dotenv.config({path: path.join(__dirname,'config','config.env')});
 
@@ -12,6 +13,7 @@ const { connect } = require('http2');
 connectDatabase();
 
 app.use(express.json())
+app.use(cors());
 app.use('/api/v1/',products);
 app.use('/api/v1/',orders);
 
