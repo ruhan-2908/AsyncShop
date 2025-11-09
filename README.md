@@ -3,14 +3,10 @@
 **AsyncShop** is a basic mini e-commerce website that allows users to browse products, add items to the cart, and remove them. It is designed as a simple, beginner-friendly platform to practice full-stack development concepts.
 
 
-![](images/home.png)
+![](images/1.png)
 
 
-![](images/order.png)
-
-
-![](images/cart.png)
-
+![](images/2.png)
 
 ## Features
 
@@ -50,9 +46,9 @@ Follow these steps to run **AsyncShop** locally:
 4. Open your browser and visit http://localhost:3000 to see the website.
 
 ## Usage
- -- Browse the product catalog.
- -- Click Add to Cart to add items.
- -- Remove items from the cart as needed.
- -- Self-explanatory user interface.
+ - Browse the product catalog.
+ - Click Add to Cart to add items.
+ - Remove items from the cart as needed.
+ - Self-explanatory user interface.
 
 
