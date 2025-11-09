@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import {toast} from 'react-toastify'
 export default function ProductDetail({ cartItems, setCartItems }) {
     const [product, setProduct] = useState(null);
     const [qty, setQty] = useState(1);
@@ -16,14 +17,16 @@ export default function ProductDetail({ cartItems, setCartItems }) {
             const newItem = { product, qty };
             setCartItems((state) => {
                 return [...state, newItem];
-            })
+            });
+            toast.success("Cart Item Added Successfully!!")
         }
     }
     function increaseCount() {
-        setQty(qty + 1);
+        if(product.stock == qty) return;
+        setQty((state) => state+1);
     }
     function decreaseCount() {
-        if (qty != 0) setQty(qty - 1);
+        if (qty > 1) setQty((state) => state-1);
     }
     return product && <div className="container container-fluid">
         <div className="row f-flex justify-content-around">
@@ -52,7 +55,7 @@ export default function ProductDetail({ cartItems, setCartItems }) {
 
                     <span onClick={increaseCount} className="btn btn-primary plus">+</span>
                 </div>
-                <button onClick={addToCart} type="button" id="cart_btn" className="btn btn-primary d-inline ml-4">Add to Cart</button>
+                <button disabled={product.stock==0} onClick={addToCart} type="button" id="cart_btn" className="btn btn-primary d-inline ml-4">Add to Cart</button>
 
                 <hr />
 
