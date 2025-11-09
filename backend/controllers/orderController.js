@@ -1,5 +1,5 @@
 const orderModel = require('../models/orderModel')
-
+const productModel = require('../models/productModel')
 
 
 //Create Order - /api/v1/order
@@ -9,6 +9,12 @@ exports.createOrder = async (req,res,next) => {
     const status = 'Pending';
     console.log("Amount " + amount)
     const order = await orderModel.create({cartItems,amount,status})
+
+    cartItems.forEach(async (item) =>{
+        const product = await productModel.findById(item.product._id);
+        product.stock = product.stock - item.qty;
+        await product.save();
+    })
     res.json({
         success :true,
         order
