@@ -12,9 +12,7 @@ export default function Home() {
     },[searchParams])
     return (
         <Fragment>
-
             <h1 id="products_heading">Latest Products</h1>
-
             <section id="products" className="container mt-5">
                 <div className="row">
                     {products.map((product) => <ProductCard product={product}/>)}
