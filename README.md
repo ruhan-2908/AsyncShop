@@ -6,8 +6,6 @@
 ![](images/1.png)
 
 
-![](images/2.png)
-
 ## Features
 
 - Browse products with basic details.  
