@@ -1,3 +1,5 @@
+//Header.js
+
 import Search from "./Search";
 import { Link } from "react-router-dom";
 export default function Header({ cartItems }) {
