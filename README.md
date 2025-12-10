@@ -27,7 +27,7 @@ Follow these steps to run **AsyncShop** locally:
 
 1. Clone the repository:  
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ruhan-2908/AsyncShop.git
    ```
 2. Install backend dependencies and start the server.
     ```bash
